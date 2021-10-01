@@ -34,3 +34,16 @@ nnoremap <F4> :nohlsearch<CR>
 
 "Misc
 :set history=1000
+:set scrolloff=8 "keep cursor 8 lines off the edge
+
+"File browsing
+let g:netrw_banner=0 "disable banner
+"let g:netrw_browse_split=4  " open in prior window
+let g:netrw_altv=1          " open splits to the right
+let g:netrw_liststyle=3     " tree view
+let g:netrw_list_hide=netrw_gitignore#Hide()
+let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+
+
+"Splits default direction
+:set splitbelow splitright
